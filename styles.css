@@ -1,0 +1,302 @@
+/* Global Styles */
+:root {
+    --primary-color: #366998;
+    --secondary-color: #4CAF50;
+    --dark-color: #2C3E50;
+    --light-color: #f4f4f4;
+    --accent-color: #E74C3C;
+    --google-play-color: #3DDC84;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+}
+
+/* Navigation */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--primary-color) !important;
+}
+
+.navbar-brand img {
+    margin-right: 8px;
+}
+
+/* Hero Section */
+.hero-section {
+    padding-top: 80px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('assets/pattern.png');
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+/* Feature Cards */
+.feature-card {
+    padding: 2rem;
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.feature-card i {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    color: var(--dark-color);
+}
+
+.feature-card p {
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2C5282;
+    border-color: #2C5282;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Hero section specific button */
+.hero-section .btn-primary {
+    background-color: #3DDC84;
+    border-color: #3DDC84;
+}
+
+.hero-section .btn-primary:hover {
+    background-color: #2fc76e;
+    border-color: #2fc76e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(61, 220, 132, 0.2);
+}
+
+/* Contact Form */
+#contact {
+    background-color: var(--light-color);
+}
+
+.form-control {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(54, 105, 152, 0.25);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    color: var(--primary-color) !important;
+    transform: translateY(-3px);
+}
+
+/* Section Headers */
+section h2 {
+    color: var(--dark-color);
+    font-weight: 700;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+        padding-top: 120px;
+    }
+    
+    .hero-section img {
+        margin-top: 2rem;
+    }
+    
+    .feature-card {
+        margin-bottom: 1rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.feature-card, .hero-section h1, .hero-section p {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Target Users Section */
+#target-users .feature-card {
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+}
+
+#target-users .feature-card i {
+    color: var(--accent-color);
+}
+
+/* Download Section */
+#download {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e3e6f0 100%);
+}
+
+#download .btn-primary {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    background-color: var(--google-play-color);
+    border-color: var(--google-play-color);
+}
+
+#download .btn-primary:hover {
+    background-color: #2fc76e;
+    border-color: #2fc76e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(61, 220, 132, 0.2);
+}
+
+/* App Preview */
+.app-preview {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* App Preview Gallery */
+.app-preview-gallery {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 480px;
+}
+
+.gallery-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 480px;
+    height: 480px;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.gallery-image.active {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .app-preview-gallery {
+        height: 420px;
+    }
+    
+    .gallery-image {
+        width: 420px;
+        height: 420px;
+    }
+} 

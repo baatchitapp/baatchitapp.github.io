@@ -1,0 +1,5 @@
+theme: jekyll-theme-minimal
+title: Baatchit - Your Personal Health Assistant
+description: A modern health management app that helps you keep track of your medical records, appointments, and prescriptions.
+baseurl: "/Baatchit"
+url: "https://yourusername.github.io" 
